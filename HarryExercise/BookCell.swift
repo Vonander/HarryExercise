@@ -10,53 +10,75 @@ import UIKit
 
 class BookCell: UITableViewCell {
 
-    var coverImage = UIImageView()
-    var titleLabel = UILabel()
-    var authorLabel = UILabel()
-    var narratorLabel = UILabel()
+    var coverImage: UIImageView = {
+        let image = UIImageView()
+        image.layer.cornerRadius = 10
+        image.clipsToBounds = true
+
+        return image
+    }()
+
+    var titleLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 1
+        label.textColor = .black
+
+        return label
+    }()
+
+    var authorLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 1
+        label.textColor = .black
+
+        return label
+    }()
+
+    var narratorLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 1
+        label.textColor = .black
+
+        return label
+    }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-        addSubview(coverImage)
-        addSubview(titleLabel)
-
-        configureImageView()
-        configureTitleLabel()
-
-        setImageConstraints()
-        setTitleLabelConstraints()
+        addSubViews()
+        setConstraints()
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func configureImageView() {
-        coverImage.layer.cornerRadius = 10
-        coverImage.clipsToBounds = true
+    private func addSubViews() {
+        addSubview(coverImage)
+        addSubview(titleLabel)
+        addSubview(authorLabel)
+        addSubview(narratorLabel)
     }
 
-    private func configureTitleLabel() {
-        titleLabel.numberOfLines = 0
-        titleLabel.adjustsFontSizeToFitWidth = true
-        titleLabel.text = "hej"
-        titleLabel.textColor = .blue
-    }
+    private func setConstraints() {
+        coverImage.constraint(leading: leadingAnchor,
+                              centerY: centerYAnchor,
+                              padding: .init(top: 0, left: 12, bottom: 0, right: 0),
+                              size: .init(width: 80, height: 80))
 
-    private func setImageConstraints() {
-        coverImage.translatesAutoresizingMaskIntoConstraints = false
-        coverImage.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        coverImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive = true
-        coverImage.heightAnchor.constraint(equalToConstant: 80).isActive = true
-        coverImage.widthAnchor.constraint(equalTo: coverImage.heightAnchor, multiplier: 16/9).isActive = true
-    }
+        titleLabel.constraint(top: topAnchor,
+                              leading: coverImage.trailingAnchor,
+                              trailing: trailingAnchor,
+                              padding: .init(top: 8, left: 20, bottom: 0, right: 10))
 
-    private func setTitleLabelConstraints() {
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo: coverImage.trailingAnchor, constant: 20).isActive = true
-        titleLabel.heightAnchor.constraint(equalToConstant: 80).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
+        authorLabel.constraint(top: titleLabel.bottomAnchor,
+                               leading: coverImage.trailingAnchor,
+                               trailing: trailingAnchor,
+                               padding: .init(top: 8, left: 20, bottom: 0, right: 10))
+
+        narratorLabel.constraint(top: authorLabel.bottomAnchor,
+                               leading: coverImage.trailingAnchor,
+                               trailing: trailingAnchor,
+                               padding: .init(top: 8, left: 20, bottom: 0, right: 10))
     }
 }

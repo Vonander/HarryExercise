@@ -17,8 +17,9 @@ class BookViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = Constants.title
         configureTableView()
+
+        title = Constants.title
 
         fetchBooks()
     }
@@ -47,8 +48,9 @@ class BookViewController: UIViewController {
         setTableViewDelegates()
 
         tableView.rowHeight = 100
+        tableView.isPagingEnabled = true
         tableView.register(BookCell.self, forCellReuseIdentifier: Constants.bookCell)
-        tableView.pin(to: view)
+        tableView.fill(parent: view)
     }
 
     private func setTableViewDelegates() {
@@ -56,6 +58,42 @@ class BookViewController: UIViewController {
         tableView.dataSource = self
     }
 
+    private func getAuthors(_ index: Int) ->  String{
+        var names = "By:"
+
+        if bookResults.items[index].authors.count > 1 {
+            bookResults.items[index].authors.forEach {author in
+                names += " \(author.name),"
+            }
+            names = String(names.dropLast())
+
+        } else {
+            names += " \(bookResults.items[index].authors[0].name)"
+        }
+
+        return names
+    }
+
+    private func getNarrators(_ index: Int) -> String {
+        if bookResults.items[index].narrators.count == 0 {
+
+            return "With: TBA"
+        }
+
+        var names = "With:"
+
+        if bookResults.items[index].narrators.count > 1 {
+            bookResults.items[index].narrators.forEach {narrator in
+                names += " \(narrator.name),"
+            }
+            names = String(names.dropLast())
+
+        } else {
+            names += " \(bookResults.items[index].narrators[0].name)"
+        }
+
+        return names
+    }
 }
 
 extension BookViewController: UITableViewDelegate, UITableViewDataSource {
@@ -67,8 +105,10 @@ extension BookViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.bookCell) as! BookCell
 
-        cell.titleLabel.text = bookResults.items[indexPath.row].title
         cell.coverImage.load(urlString: bookResults.items[indexPath.row].cover.url)
+        cell.titleLabel.text = bookResults.items[indexPath.row].title
+        cell.authorLabel.text = getAuthors(indexPath.row)
+        cell.narratorLabel.text = getNarrators(indexPath.row)
 
         return cell
     }
