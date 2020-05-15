@@ -9,19 +9,31 @@
 /* Begin PBXBuildFile section */
 		414688E7246AD7E900E89766 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414688E6246AD7E900E89766 /* AppDelegate.swift */; };
 		414688E9246AD7E900E89766 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414688E8246AD7E900E89766 /* SceneDelegate.swift */; };
-		414688EB246AD7E900E89766 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414688EA246AD7E900E89766 /* ViewController.swift */; };
 		414688F0246AD7EC00E89766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 414688EF246AD7EC00E89766 /* Assets.xcassets */; };
 		414688F3246AD7ED00E89766 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 414688F1246AD7ED00E89766 /* LaunchScreen.storyboard */; };
+		414688FB246AE3E000E89766 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414688FA246AE3E000E89766 /* MainViewController.swift */; };
+		414688FF246AE6E500E89766 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414688FE246AE6E500E89766 /* UIView+Ext.swift */; };
+		41468901246AEA4700E89766 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41468900246AEA4700E89766 /* BookCell.swift */; };
+		41B394DA246EC3D90054ACF2 /* BookModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B394D9246EC3D90054ACF2 /* BookModels.swift */; };
+		41B394DC246EC4350054ACF2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B394DB246EC4350054ACF2 /* Constants.swift */; };
+		41B394DE246ECECF0054ACF2 /* UIImageView+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B394DD246ECECF0054ACF2 /* UIImageView+Load.swift */; };
+		41B394E0246ED9890054ACF2 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B394DF246ED9890054ACF2 /* ApiHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		414688E3246AD7E900E89766 /* HarryExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarryExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		414688E6246AD7E900E89766 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		414688E8246AD7E900E89766 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		414688EA246AD7E900E89766 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		414688EF246AD7EC00E89766 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		414688F2246AD7ED00E89766 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		414688F4246AD7ED00E89766 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		414688FA246AE3E000E89766 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		414688FE246AE6E500E89766 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		41468900246AEA4700E89766 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		41B394D9246EC3D90054ACF2 /* BookModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModels.swift; sourceTree = "<group>"; };
+		41B394DB246EC4350054ACF2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		41B394DD246ECECF0054ACF2 /* UIImageView+Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Load.swift"; sourceTree = "<group>"; };
+		41B394DF246ED9890054ACF2 /* ApiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,44 @@
 		414688E5246AD7E900E89766 /* HarryExercise */ = {
 			isa = PBXGroup;
 			children = (
-				414688E6246AD7E900E89766 /* AppDelegate.swift */,
-				414688E8246AD7E900E89766 /* SceneDelegate.swift */,
-				414688EA246AD7E900E89766 /* ViewController.swift */,
-				414688EF246AD7EC00E89766 /* Assets.xcassets */,
-				414688F1246AD7ED00E89766 /* LaunchScreen.storyboard */,
+				414688FD246AE6A600E89766 /* Extensions */,
+				41B394D8246EC3900054ACF2 /* Models */,
+				414688FC246AE68200E89766 /* Supporting */,
+				414688FA246AE3E000E89766 /* MainViewController.swift */,
 				414688F4246AD7ED00E89766 /* Info.plist */,
+				41B394DF246ED9890054ACF2 /* ApiHandler.swift */,
+				41468900246AEA4700E89766 /* BookCell.swift */,
 			);
 			path = HarryExercise;
+			sourceTree = "<group>";
+		};
+		414688FC246AE68200E89766 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				414688E6246AD7E900E89766 /* AppDelegate.swift */,
+				414688E8246AD7E900E89766 /* SceneDelegate.swift */,
+				41B394DB246EC4350054ACF2 /* Constants.swift */,
+				414688EF246AD7EC00E89766 /* Assets.xcassets */,
+				414688F1246AD7ED00E89766 /* LaunchScreen.storyboard */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		414688FD246AE6A600E89766 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				414688FE246AE6E500E89766 /* UIView+Ext.swift */,
+				41B394DD246ECECF0054ACF2 /* UIImageView+Load.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		41B394D8246EC3900054ACF2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				41B394D9246EC3D90054ACF2 /* BookModels.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +176,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				414688EB246AD7E900E89766 /* ViewController.swift in Sources */,
+				41B394DE246ECECF0054ACF2 /* UIImageView+Load.swift in Sources */,
+				414688FF246AE6E500E89766 /* UIView+Ext.swift in Sources */,
+				414688FB246AE3E000E89766 /* MainViewController.swift in Sources */,
 				414688E7246AD7E900E89766 /* AppDelegate.swift in Sources */,
+				41B394E0246ED9890054ACF2 /* ApiHandler.swift in Sources */,
 				414688E9246AD7E900E89766 /* SceneDelegate.swift in Sources */,
+				41B394DC246EC4350054ACF2 /* Constants.swift in Sources */,
+				41B394DA246EC3D90054ACF2 /* BookModels.swift in Sources */,
+				41468901246AEA4700E89766 /* BookCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +330,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fornander.harryexercise.HarryExercise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -300,7 +348,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fornander.harryexercise.HarryExercise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
