@@ -19,7 +19,20 @@
 		41B394E0246ED9890054ACF2 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B394DF246ED9890054ACF2 /* ApiHandler.swift */; };
 		41B394E2246EF8C90054ACF2 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B394E1246EF8C90054ACF2 /* UIView+Constraints.swift */; };
 		41B394E5247141F50054ACF2 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B394E4247141F50054ACF2 /* LoadingCell.swift */; };
+		41B394ED24717B6E0054ACF2 /* HarryExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B394EC24717B6E0054ACF2 /* HarryExerciseTests.swift */; };
+		41B394F4247188A20054ACF2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B394DB246EC4350054ACF2 /* Constants.swift */; };
+		41B394F5247188AC0054ACF2 /* BookModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B394D9246EC3D90054ACF2 /* BookModels.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		41B394EF24717B6E0054ACF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 414688DB246AD7E900E89766 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 414688E2246AD7E900E89766;
+			remoteInfo = HarryExercise;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		414688E3246AD7E900E89766 /* HarryExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarryExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,10 +49,20 @@
 		41B394DF246ED9890054ACF2 /* ApiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHandler.swift; sourceTree = "<group>"; };
 		41B394E1246EF8C90054ACF2 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		41B394E4247141F50054ACF2 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
+		41B394EA24717B6E0054ACF2 /* HarryExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarryExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		41B394EC24717B6E0054ACF2 /* HarryExerciseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryExerciseTests.swift; sourceTree = "<group>"; };
+		41B394EE24717B6E0054ACF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		414688E0246AD7E900E89766 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41B394E724717B6E0054ACF2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				414688E5246AD7E900E89766 /* HarryExercise */,
+				41B394EB24717B6E0054ACF2 /* HarryExerciseTests */,
 				414688E4246AD7E900E89766 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				414688E3246AD7E900E89766 /* HarryExercise.app */,
+				41B394EA24717B6E0054ACF2 /* HarryExerciseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,13 +93,13 @@
 		414688E5246AD7E900E89766 /* HarryExercise */ = {
 			isa = PBXGroup;
 			children = (
-				414688FD246AE6A600E89766 /* Extensions */,
-				41B394D8246EC3900054ACF2 /* Models */,
-				414688FC246AE68200E89766 /* Supporting */,
 				414688FA246AE3E000E89766 /* MainViewController.swift */,
+				41B394F6247193270054ACF2 /* Handlers */,
+				41B394D8246EC3900054ACF2 /* Models */,
 				41B394E3247141CE0054ACF2 /* Cells */,
+				414688FC246AE68200E89766 /* Supporting */,
+				414688FD246AE6A600E89766 /* Extensions */,
 				414688F4246AD7ED00E89766 /* Info.plist */,
-				41B394DF246ED9890054ACF2 /* ApiHandler.swift */,
 			);
 			path = HarryExercise;
 			sourceTree = "<group>";
@@ -117,6 +142,23 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		41B394EB24717B6E0054ACF2 /* HarryExerciseTests */ = {
+			isa = PBXGroup;
+			children = (
+				41B394EC24717B6E0054ACF2 /* HarryExerciseTests.swift */,
+				41B394EE24717B6E0054ACF2 /* Info.plist */,
+			);
+			path = HarryExerciseTests;
+			sourceTree = "<group>";
+		};
+		41B394F6247193270054ACF2 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				41B394DF246ED9890054ACF2 /* ApiHandler.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +179,24 @@
 			productReference = 414688E3246AD7E900E89766 /* HarryExercise.app */;
 			productType = "com.apple.product-type.application";
 		};
+		41B394E924717B6E0054ACF2 /* HarryExerciseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41B394F124717B6E0054ACF2 /* Build configuration list for PBXNativeTarget "HarryExerciseTests" */;
+			buildPhases = (
+				41B394E624717B6E0054ACF2 /* Sources */,
+				41B394E724717B6E0054ACF2 /* Frameworks */,
+				41B394E824717B6E0054ACF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				41B394F024717B6E0054ACF2 /* PBXTargetDependency */,
+			);
+			name = HarryExerciseTests;
+			productName = HarryExerciseTests;
+			productReference = 41B394EA24717B6E0054ACF2 /* HarryExerciseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -149,6 +209,10 @@
 				TargetAttributes = {
 					414688E2246AD7E900E89766 = {
 						CreatedOnToolsVersion = 11.4.1;
+					};
+					41B394E924717B6E0054ACF2 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 414688E2246AD7E900E89766;
 					};
 				};
 			};
@@ -166,6 +230,7 @@
 			projectRoot = "";
 			targets = (
 				414688E2246AD7E900E89766 /* HarryExercise */,
+				41B394E924717B6E0054ACF2 /* HarryExerciseTests */,
 			);
 		};
 /* End PBXProject section */
@@ -177,6 +242,13 @@
 			files = (
 				414688F3246AD7ED00E89766 /* LaunchScreen.storyboard in Resources */,
 				414688F0246AD7EC00E89766 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41B394E824717B6E0054ACF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +272,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		41B394E624717B6E0054ACF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41B394ED24717B6E0054ACF2 /* HarryExerciseTests.swift in Sources */,
+				41B394F5247188AC0054ACF2 /* BookModels.swift in Sources */,
+				41B394F4247188A20054ACF2 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		41B394F024717B6E0054ACF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 414688E2246AD7E900E89766 /* HarryExercise */;
+			targetProxy = 41B394EF24717B6E0054ACF2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		414688F1246AD7ED00E89766 /* LaunchScreen.storyboard */ = {
@@ -364,6 +454,44 @@
 			};
 			name = Release;
 		};
+		41B394F224717B6E0054ACF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HarryExerciseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fornander.harryexercise.HarryExerciseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HarryExercise.app/HarryExercise";
+			};
+			name = Debug;
+		};
+		41B394F324717B6E0054ACF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HarryExerciseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fornander.harryexercise.HarryExerciseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HarryExercise.app/HarryExercise";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -381,6 +509,15 @@
 			buildConfigurations = (
 				414688F8246AD7ED00E89766 /* Debug */,
 				414688F9246AD7ED00E89766 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41B394F124717B6E0054ACF2 /* Build configuration list for PBXNativeTarget "HarryExerciseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41B394F224717B6E0054ACF2 /* Debug */,
+				41B394F324717B6E0054ACF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
