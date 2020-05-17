@@ -11,5 +11,6 @@ import Foundation
 struct Constants {
     static let title = "Query: Harry"
     static let bookCell = "BookCell"
+    static let loadingCell = "LoadingCell"
     static let urlString = "https://api.storytel.net/search?query=harry"
 }

@@ -11,7 +11,7 @@ import UIKit
 
 class ApiHandler: NSObject {
 
-    func fetchBooksJSON(completion: @escaping (ApiPayload?, Error?) -> ()) {
+    func fetchBooksJSON(from urlString: String, completion: @escaping (ApiPayload?, Error?) -> ()) {
 
         guard let url = URL(string: Constants.urlString) else { return }
 

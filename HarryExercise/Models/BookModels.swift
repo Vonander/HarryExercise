@@ -9,6 +9,7 @@
 import Foundation
 
 struct ApiPayload: Codable {
+    let nextPageToken: String
     let items: [Item]
 }
 
